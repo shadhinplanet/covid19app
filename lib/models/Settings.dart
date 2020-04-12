@@ -1,28 +1,24 @@
 class Settings {
-  int id;
-  String name;
-  String email;
-  String userid;
+  String language;
+  String breakingNews;
+  String newDeath;
 
   Settings(
-      {this.id,
-      this.name,
-      this.email,
-      this.userid});
+      {this.language,
+      this.breakingNews,
+      this.newDeath});
 
   Settings.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    email = json['email'];
-    userid = json['userid'];
+    language = json['language'];
+    breakingNews = json['breakingNews'];
+    newDeath = json['newDeath'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['email'] = this.email;
-    data['userid'] = this.userid;
+    data['language'] = this.language;
+    data['breakingNews'] = this.breakingNews;
+    data['newDeath'] = this.newDeath;
     return data;
   }
 }
